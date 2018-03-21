@@ -1,4 +1,4 @@
-This is a demo project which techniques including:
+This is a demo project with techniques including:
 
 1. Maven
 2. Springboot
