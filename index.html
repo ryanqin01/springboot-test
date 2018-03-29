@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>我们已经在一起了</title>
+<title>爱情记录</title>
 </head>
 <body>
 <span id="s1"></span>
@@ -12,21 +12,21 @@
 window.onload=function(){
 
     var oSpan = document.getElementById('s1');
-    var nDate = new Date('sep 8,2014');//修改需要倒计时的时间
+    var nDate = new Date('may 7,2016');//修改需要倒计时的时间
 
 showTime();
     setInterval(showTime,1000);
 
 function showTime(){
     var oDate = new Date();//获取当地显示器的时间
-    var time = Math.floor( (nDate - oDate) / 1000 );
+    var time = Math.floor( (oDate - nDate) / 1000 );
 
 var d = Math.floor( time / 86400 );
     var h = Math.floor( time % 86400 / 3600 );
     var m = Math.floor( time % 86400 % 3600 / 60 );
     var s = time % 60;
 
-oSpan.innerHTML = "距离2014年中秋节还有：<br />" + 
+oSpan.innerHTML = "我们一起在一起了：<br />" + 
     d + '天'+h+'时'+m+'分'+s+'秒';
     }
 
