@@ -14,7 +14,7 @@ window.onload=function(){
     var oSpan = document.getElementById('s1');
     var nDate = new Date('may 7,2016');//修改需要倒计时的时间
 
-showTime();
+    showTime();
     setInterval(showTime,1000);
 
 function showTime(){
@@ -26,10 +26,8 @@ var d = Math.floor( time / 86400 );
     var m = Math.floor( time % 86400 % 3600 / 60 );
     var s = time % 60;
 
-oSpan.innerHTML = "我们一起在一起了：<br />" + 
+oSpan.innerHTML = "我们已经在一起了：<br/>" + 
     d + '天'+h+'时'+m+'分'+s+'秒';
     }
-
 };
-
 </script>
