@@ -24,7 +24,7 @@ public class ClockController {
 		Duration duration = Duration.between(startTime, currentTime);
 		long seconds = duration.getSeconds();
 		if (duration.isNegative()) {
-			period.minusDays(1);
+			period = period.minusDays(1);
 			seconds = seconds + 60 * 60 * 24;
 		}
 
