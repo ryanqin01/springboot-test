@@ -1,10 +1,11 @@
 This is a demo project with techniques including:
 
 1. Maven
-2. Springboot
-3. Mybatis
-4. RestAPI
-5. Mysql
-6. Git
+2. Git
+3. Springboot
+4. Mybatis
+5. RestAPI
+6. Mysql
+7. Kafka
 
-![baidu](http://www.baidu.com/img/bdlogo.gif "百度logo")
+![qin](https://club1.autoimg.cn/album/userphotos/2014/07/04/500_31c8e48f-bb86-438d-926e-afe89eba942a.jpg "秦logo")
