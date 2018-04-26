@@ -8,7 +8,7 @@ import lombok.Data;
 
 @SolrDocument(solrCoreName = "testCollection")
 @Data
-public class Area {
+public class Employee {
 
 	@Id
 	@Field

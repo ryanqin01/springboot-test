@@ -7,18 +7,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.opentext.springboot.domain.Area;
-import com.opentext.springboot.service.AreaService;
+import com.opentext.springboot.domain.Employee;
+import com.opentext.springboot.service.EmployeeService;
 
 @RestController
-public class AreaController {
+public class EmployeeController {
 
 	@Autowired
-	private AreaService areaService;
+	private EmployeeService areaService;
 
 	@RequestMapping(value = "query", method = RequestMethod.GET)
-	public List<Area> query(String username) {
-		List<Area> list = areaService.findByusername(username);
+	public List<Employee> query(String username) {
+		List<Employee> list = areaService.findByusername(username);
 		return list;
 	}
 }
