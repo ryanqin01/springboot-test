@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.opentext.springboot.dao.CityDao;
-import com.opentext.springboot.domain.City;
+import com.opentext.springboot.model.City;
 
 @Service
 public class CityServiceImpl implements CityService {

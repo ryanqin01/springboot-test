@@ -2,7 +2,7 @@ package com.opentext.springboot.service;
 
 import java.util.List;
 
-import com.opentext.springboot.domain.City;
+import com.opentext.springboot.model.City;
 
 public interface CityService {
 

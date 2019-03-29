@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.opentext.springboot.model.Message;
 
 import lombok.extern.slf4j.Slf4j;
 

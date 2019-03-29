@@ -5,7 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
-import com.opentext.springboot.domain.City;
+import com.opentext.springboot.model.City;
 
 @Mapper
 public interface CityDao {

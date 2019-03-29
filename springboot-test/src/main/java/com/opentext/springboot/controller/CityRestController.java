@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.opentext.springboot.domain.City;
+import com.opentext.springboot.model.City;
 import com.opentext.springboot.service.CityService;
 
 @RestController
