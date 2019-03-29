@@ -9,3 +9,6 @@ target/
 
 # Mac files
 .DS_Store
+
+.project
+.classpath
