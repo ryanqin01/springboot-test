@@ -1,4 +1,5 @@
-This is a learning usage test project about springboot and related techs like
+This is a learning usage test project about springboot and related techs like following listed. The code may be experimental and inaccurate.
+
 1. Maven
 2. Git
 3. Springboot
