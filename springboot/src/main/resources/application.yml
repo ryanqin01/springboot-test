@@ -1,0 +1,50 @@
+test-service:
+  testvalue: 1
+
+spring:
+  jpa:
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+  kafka:
+    bootstrap-servers: "localhost:9092"
+    producer:
+      retries: 0
+      batch-size: 16384
+      buffer-memory: 33554432
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      group-id: test-consumer-group
+      auto-offset-reset: earliest
+      enable-auto-commit: true
+      auto-commit-interval: 100
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+      hibernate: DEBUG
+
+#============== mysql ============================
+#spring:
+#  datasource:
+#    url:"jdbc:mysql://localhost:3306/testdb?useUnicode=true&characterEncoding=utf8&useSSL=false"
+#    username:root
+#    password:password
+#    driver-class-name:"com.mysql.jdbc.Driver"
+    
+#============== mybatis ==========================
+mybatis:
+  typeAliasesPackage: "com.opentext.springboot.model"
+  mapperLocations: "classpath:mapper/*.xml"
+
+#============== solr =============================
+#spring:
+#  data:
+#    solr:
+#      host: "http://localhost:8983/solr"

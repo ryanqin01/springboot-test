@@ -6,8 +6,8 @@ import com.opentext.springboot.model.City;
 
 public interface CityService {
 
-	City findCityByName(String cityName);
+	public City findCityByName(String cityName);
 
-	List<City> findAllCityNames();
+	public List<City> findAllCityNames();
 
 }

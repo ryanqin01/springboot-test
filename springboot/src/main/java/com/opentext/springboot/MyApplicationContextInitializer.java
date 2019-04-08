@@ -21,14 +21,13 @@ public class MyApplicationContextInitializer implements ApplicationContextInitia
 				sender.send();
 			} catch (Exception e) {
 				log.warn("Kafka service is not available.");
-				break;
-			}
-			try {
-				Thread.sleep(3000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
+				try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e2) {
+					e2.printStackTrace();
+				}
+				continue;
 			}
 		}
-
 	}
 }
