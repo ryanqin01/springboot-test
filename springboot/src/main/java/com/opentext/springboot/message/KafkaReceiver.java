@@ -11,7 +11,8 @@ import lombok.extern.slf4j.Slf4j;
 @Component
 @Slf4j
 public class KafkaReceiver {
-	@KafkaListener(topics = { "testkafka" })
+
+	@KafkaListener(topics = "#{kafkaTopicName}")
 	public void listen(ConsumerRecord<?, ?> record) {
 		Optional<?> kafkaMessage = Optional.ofNullable(record.value());
 		if (kafkaMessage.isPresent()) {

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.opentext.springboot.Config;
+import com.opentext.springboot.ServerConfig;
 
 @RestController
 public class HelloWorldController {
@@ -17,7 +17,7 @@ public class HelloWorldController {
 	private MessageSource messageSource;
 
 	@Autowired
-	private Config config;
+	private ServerConfig config;
 
 	@GetMapping(path = "/")
 	public String sayHello(@RequestHeader(name = "Accept-Language", required = false) Locale locale) {

@@ -8,9 +8,10 @@ import lombok.Setter;
 
 @Component
 @ConfigurationProperties(prefix = "test-service")
-public class Config {
+public class ServerConfig {
 
 	@Getter
 	@Setter
 	private int testvalue;
+
 }

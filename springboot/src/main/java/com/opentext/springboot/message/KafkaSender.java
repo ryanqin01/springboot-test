@@ -16,6 +16,9 @@ import lombok.extern.slf4j.Slf4j;
 @Component
 @Slf4j
 public class KafkaSender {
+
+	@Autowired
+	private String kafkaTopicName;
 	@Autowired
 	private KafkaTemplate<String, String> kafkaTemplate;
 	private Gson gson = new GsonBuilder().create();
@@ -26,6 +29,6 @@ public class KafkaSender {
 		message.setMsg(UUID.randomUUID().toString());
 		message.setSendTime(new Date());
 		log.info("+++++++++++++++++++++  message = {}", gson.toJson(message));
-		kafkaTemplate.send("testkafka", gson.toJson(message));
+		kafkaTemplate.send(kafkaTopicName, gson.toJson(message));
 	}
 }
