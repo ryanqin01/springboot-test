@@ -6,7 +6,7 @@ import org.springframework.data.solr.core.mapping.SolrDocument;
 
 import lombok.Data;
 
-@SolrDocument(solrCoreName = "testCollection")
+@SolrDocument(collection = "testCollection")
 @Data
 public class Employee {
 

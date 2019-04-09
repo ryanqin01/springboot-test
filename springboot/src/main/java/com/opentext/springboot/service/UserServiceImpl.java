@@ -13,6 +13,6 @@ public class UserServiceImpl {
 	private UserDao userDao;
 
 	public User getUser(int id) {
-		return userDao.getOne(id);
+		return userDao.findById(id).get();
 	}
 }

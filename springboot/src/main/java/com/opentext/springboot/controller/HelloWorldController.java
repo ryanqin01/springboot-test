@@ -6,11 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.opentext.springboot.ServerConfig;
 
 @RestController
+@RequestMapping("/")
 public class HelloWorldController {
 
 	@Autowired
@@ -19,7 +21,7 @@ public class HelloWorldController {
 	@Autowired
 	private ServerConfig config;
 
-	@GetMapping(path = "/")
+	@GetMapping
 	public String sayHello(@RequestHeader(name = "Accept-Language", required = false) Locale locale) {
 		return messageSource.getMessage("hello.message", null, locale) + " testvalue: " + config.getTestvalue();
 	}
