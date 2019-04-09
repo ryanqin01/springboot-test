@@ -1,4 +1,4 @@
-package com.opentext.springboot.model;
+package cn.ryan.springboot.model;
 
 import org.apache.solr.client.solrj.beans.Field;
 import org.springframework.data.annotation.Id;

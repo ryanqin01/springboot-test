@@ -1,12 +1,12 @@
-package com.opentext.springboot.service;
+package cn.ryan.springboot.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.opentext.springboot.dao.CityDao;
-import com.opentext.springboot.model.City;
+import cn.ryan.springboot.dao.CityDao;
+import cn.ryan.springboot.model.City;
 
 @Service
 public class CityServiceImpl implements CityService {

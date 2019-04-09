@@ -1,4 +1,4 @@
-package com.opentext.springboot;
+package cn.ryan.springboot;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

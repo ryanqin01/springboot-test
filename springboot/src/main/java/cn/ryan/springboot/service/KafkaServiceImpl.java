@@ -1,4 +1,4 @@
-package com.opentext.springboot.service;
+package cn.ryan.springboot.service;
 
 import javax.annotation.PostConstruct;
 
@@ -7,7 +7,8 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.opentext.springboot.message.KafkaSender;
+
+import cn.ryan.springboot.message.KafkaSender;
 
 @Service
 public class KafkaServiceImpl {

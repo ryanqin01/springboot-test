@@ -1,4 +1,4 @@
-package com.opentext.springboot.controller;
+package cn.ryan.springboot.controller;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.opentext.springboot.dao.EmployeeDao;
-import com.opentext.springboot.model.Employee;
+import cn.ryan.springboot.dao.EmployeeDao;
+import cn.ryan.springboot.model.Employee;
 
 @RestController
 @RequestMapping("/employee")

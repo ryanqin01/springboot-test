@@ -1,4 +1,4 @@
-package com.opentext.springboot;
+package cn.ryan.springboot;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

@@ -1,10 +1,10 @@
-package com.opentext.springboot.service;
+package cn.ryan.springboot.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.opentext.springboot.dao.UserDao;
-import com.opentext.springboot.model.User;
+import cn.ryan.springboot.dao.UserDao;
+import cn.ryan.springboot.model.User;
 
 @Service
 public class UserServiceImpl {

@@ -1,4 +1,4 @@
-package com.opentext.springboot.controller;
+package cn.ryan.springboot.controller;
 
 import java.util.Locale;
 
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.opentext.springboot.ServerConfig;
+import cn.ryan.springboot.ServerConfig;
 
 @RestController
 @RequestMapping("/")

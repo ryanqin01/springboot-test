@@ -1,4 +1,4 @@
-package com.opentext.springboot.controller;
+package cn.ryan.springboot.controller;
 
 import java.time.Duration;
 import java.time.LocalDate;

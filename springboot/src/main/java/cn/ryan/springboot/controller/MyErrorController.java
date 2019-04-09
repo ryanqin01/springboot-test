@@ -1,4 +1,4 @@
-package com.opentext.springboot.controller;
+package cn.ryan.springboot.controller;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;

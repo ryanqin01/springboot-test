@@ -26,8 +26,15 @@ spring:
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
     topic: testkafka
+  data:
+    solr:
+      host: "http://localhost:8983/solr"
+  datasource:
+    url:"jdbc:mysql://localhost:3306/testdb?useUnicode=true&characterEncoding=utf8&useSSL=false"
+    username:root
+    password:password
+    driver-class-name:"com.mysql.jdbc.Driver"
       
-
 logging:
   level:
     org:
@@ -35,21 +42,6 @@ logging:
         web: DEBUG
       hibernate: DEBUG
 
-#============== mysql ============================
-#spring:
-#  datasource:
-#    url:"jdbc:mysql://localhost:3306/testdb?useUnicode=true&characterEncoding=utf8&useSSL=false"
-#    username:root
-#    password:password
-#    driver-class-name:"com.mysql.jdbc.Driver"
-    
-#============== mybatis ==========================
 mybatis:
-  typeAliasesPackage: "com.opentext.springboot.model"
+  typeAliasesPackage: "cn.ryan.springboot.model"
   mapperLocations: "classpath:mapper/*.xml"
-
-#============== solr =============================
-#spring:
-#  data:
-#    solr:
-#      host: "http://localhost:8983/solr"

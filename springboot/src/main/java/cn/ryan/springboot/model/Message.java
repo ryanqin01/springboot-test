@@ -1,4 +1,4 @@
-package com.opentext.springboot.model;
+package cn.ryan.springboot.model;
 
 import java.util.Date;
 

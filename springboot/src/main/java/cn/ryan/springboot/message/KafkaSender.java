@@ -1,4 +1,4 @@
-package com.opentext.springboot.message;
+package cn.ryan.springboot.message;
 
 import java.util.Date;
 import java.util.UUID;
@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.opentext.springboot.model.Message;
 
+import cn.ryan.springboot.model.Message;
 import lombok.extern.slf4j.Slf4j;
 
 @Component

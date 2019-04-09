@@ -1,8 +1,8 @@
-package com.opentext.springboot.service;
+package cn.ryan.springboot.service;
 
 import java.util.List;
 
-import com.opentext.springboot.model.City;
+import cn.ryan.springboot.model.City;
 
 public interface CityService {
 

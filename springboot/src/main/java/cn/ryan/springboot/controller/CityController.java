@@ -1,4 +1,4 @@
-package com.opentext.springboot.controller;
+package cn.ryan.springboot.controller;
 
 import java.util.List;
 
@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.opentext.springboot.model.City;
-import com.opentext.springboot.service.CityService;
+import cn.ryan.springboot.model.City;
+import cn.ryan.springboot.service.CityService;
 
 @RestController
 @RequestMapping("/city")
-@MapperScan("com.opentext.springboot.dao")
+@MapperScan("cn.ryan.springboot.dao")
 public class CityController {
 
 	@Autowired

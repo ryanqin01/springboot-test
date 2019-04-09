@@ -1,8 +1,8 @@
-package com.opentext.springboot.dao;
+package cn.ryan.springboot.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.opentext.springboot.model.User;
+import cn.ryan.springboot.model.User;
 
 public interface UserDao extends JpaRepository<User, Integer> {
 

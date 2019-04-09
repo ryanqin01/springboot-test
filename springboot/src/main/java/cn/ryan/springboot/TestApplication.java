@@ -1,4 +1,4 @@
-package com.opentext.springboot;
+package cn.ryan.springboot;
 
 import java.util.Locale;
 

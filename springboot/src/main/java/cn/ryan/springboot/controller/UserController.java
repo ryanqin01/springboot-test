@@ -1,4 +1,4 @@
-package com.opentext.springboot.controller;
+package cn.ryan.springboot.controller;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.opentext.springboot.model.User;
-import com.opentext.springboot.service.UserServiceImpl;
+import cn.ryan.springboot.model.User;
+import cn.ryan.springboot.service.UserServiceImpl;
 
 @RestController
 public class UserController {

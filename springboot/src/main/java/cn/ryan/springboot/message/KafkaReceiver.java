@@ -1,4 +1,4 @@
-package com.opentext.springboot.message;
+package cn.ryan.springboot.message;
 
 import java.util.Optional;
 
