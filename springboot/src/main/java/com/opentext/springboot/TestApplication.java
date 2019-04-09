@@ -10,6 +10,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 @EnableScheduling
 @SpringBootApplication
 public class TestApplication {
@@ -31,5 +33,11 @@ public class TestApplication {
 		ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
 		messageSource.setBasename("messages");
 		return messageSource;
+	}
+
+	@Bean
+	public ObjectMapper ObjectMapper() {
+		ObjectMapper objectMapper = new ObjectMapper();
+		return objectMapper;
 	}
 }

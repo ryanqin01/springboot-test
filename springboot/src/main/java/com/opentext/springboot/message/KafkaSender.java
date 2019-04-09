@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.opentext.springboot.model.Message;
 
 import lombok.extern.slf4j.Slf4j;
@@ -21,14 +21,15 @@ public class KafkaSender {
 	private String kafkaTopicName;
 	@Autowired
 	private KafkaTemplate<String, String> kafkaTemplate;
-	private Gson gson = new GsonBuilder().create();
+	@Autowired
+	private ObjectMapper objectMapper;
 
-	public void send() {
+	public void send() throws JsonProcessingException {
 		Message message = new Message();
 		message.setId(System.currentTimeMillis());
 		message.setMsg(UUID.randomUUID().toString());
 		message.setSendTime(new Date());
-		log.info("send message = {}", gson.toJson(message));
-		kafkaTemplate.send(kafkaTopicName, gson.toJson(message));
+		log.info("send message = {}", objectMapper.writeValueAsString(message));
+		kafkaTemplate.send(kafkaTopicName, objectMapper.writeValueAsString(message));
 	}
 }
