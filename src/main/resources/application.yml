@@ -5,6 +5,8 @@ test-service:
   testvalue: 1
 
 spring:
+  application:
+    name: testspringbootservice
   jpa:
     show-sql: true
   h2:
