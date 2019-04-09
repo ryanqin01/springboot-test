@@ -6,7 +6,7 @@ test-service:
 
 spring:
   application:
-    name: testspringbootservice
+    name: test-springboot-service
   jpa:
     show-sql: true
   h2:
