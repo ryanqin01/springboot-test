@@ -8,21 +8,26 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.Resource;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import cn.ryan.springboot.model.User;
+import cn.ryan.springboot.service.UserServiceProxy;
 
 @RestController
 @RequestMapping("/combine")
 public class CombinedController {
 
+	@Autowired
+	private UserServiceProxy proxy;
+
 	@GetMapping
 	public List<Resource<String>> getUserAndClock() {
-
 		List<Resource<String>> resources = new ArrayList<>();
 
 		Map<String, String> uriVariables = new HashMap<>();
@@ -40,4 +45,10 @@ public class CombinedController {
 		return resources;
 	}
 
+	@GetMapping("/{id}")
+	public Resource<User> getUserById(@PathVariable("id") String id) {
+		User user = proxy.getUserById(id);
+		Resource<User> resource = new Resource<User>(user);
+		return resource;
+	}
 }

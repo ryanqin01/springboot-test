@@ -4,6 +4,7 @@ import java.util.Locale;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -13,6 +14,7 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @EnableScheduling
+@EnableFeignClients()
 @SpringBootApplication
 public class TestApplication {
 
