@@ -7,6 +7,8 @@ test-service:
 spring:
   application:
     name: test-springboot-service
+  main:
+    allow-bean-definition-overrideing: true
   jpa:
     show-sql: true
   h2:
