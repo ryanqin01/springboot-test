@@ -7,9 +7,7 @@
 		</encoder>
 	</appender>
 
-	<logger name="com.opentext.searchsvc" level="INFO" />
-	<logger name="org.apache.solr" level="WARN" />
-	<logger name="org.apache.zookeeper" level="WARN" />
+	<logger name="cn.ryan.test-springboot-service" level="INFO" />
 	<logger name="org.springframework" level="WARN" />
 
 	<root level="INFO">
