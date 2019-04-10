@@ -3,10 +3,14 @@ package cn.ryan.springboot.controller;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.Resource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import cn.ryan.springboot.model.User;
@@ -19,10 +23,22 @@ public class UserController {
 	private UserServiceImpl userService;
 
 	@GetMapping("/users/{id}")
-	public Resource<User> getUser(@PathVariable int id) {
+	public Resource<User> getUserById(@PathVariable int id) {
 		User user = userService.getUser(id);
 		Resource<User> resource = new Resource<User>(user);
-		resource.add(linkTo(methodOn(UserController.class).getUser(id)).withSelfRel());
+		resource.add(linkTo(methodOn(UserController.class).getUserById(id)).withSelfRel());
 		return resource;
+	}
+
+	@GetMapping("/users")
+	public List<Resource<User>> getUsersByFrom(@RequestBody User user) {
+		List<User> users = userService.getUsersByFrom(user.getFrom());
+		List<Resource<User>> resources = new ArrayList<>();
+		users.stream().forEach(u -> {
+			Resource<User> resource = new Resource<User>(u);
+			resource.add(linkTo(methodOn(UserController.class).getUsersByFrom(user)).withSelfRel());
+			resources.add(resource);
+		});
+		return resources;
 	}
 }

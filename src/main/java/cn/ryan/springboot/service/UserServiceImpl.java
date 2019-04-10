@@ -1,5 +1,7 @@
 package cn.ryan.springboot.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,5 +16,9 @@ public class UserServiceImpl {
 
 	public User getUser(int id) {
 		return userDao.findById(id).get();
+	}
+
+	public List<User> getUsersByFrom(String from) {
+		return userDao.findByFrom(from);
 	}
 }
