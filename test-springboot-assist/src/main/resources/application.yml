@@ -6,6 +6,9 @@ spring:
     name: test-springboot-assist-service
   main:
     allow-bean-definition-overrideing: true
+  autoconfigure:
+    exclude:
+      "org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration"
       
 logging:
   level:
@@ -13,3 +16,7 @@ logging:
       springframework:
         web: DEBUG
       hibernate: DEBUG
+      
+test-springboot-main-service:
+  ribbon:
+    listOfServers: "localhost:8888"

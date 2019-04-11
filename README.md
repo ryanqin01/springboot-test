@@ -14,5 +14,6 @@ This is a learning usage test project about springboot and related techs like fo
 12. Swagger
 13. Hateoas
 14. Feign
+15. Ribbon
 
 ![qin](https://club1.autoimg.cn/album/userphotos/2014/07/04/500_31c8e48f-bb86-438d-926e-afe89eba942a.jpg "秦logo")
