@@ -14,8 +14,8 @@ public class UserServiceImpl {
 	@Autowired
 	private UserDao userDao;
 
-	public User getUser(int id) {
-		return userDao.findById(id).get();
+	public User getUser(String id) {
+		return userDao.findById(Integer.parseInt(id)).get();
 	}
 
 	public List<User> getUsersByFrom(String from) {

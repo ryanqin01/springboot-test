@@ -23,11 +23,9 @@ public class UserController {
 	private UserServiceImpl userService;
 
 	@GetMapping("/users/{id}")
-	public Resource<User> getUserById(@PathVariable int id) {
+	public User getUserById(@PathVariable String id) {
 		User user = userService.getUser(id);
-		Resource<User> resource = new Resource<User>(user);
-		resource.add(linkTo(methodOn(UserController.class).getUserById(id)).withSelfRel());
-		return resource;
+		return user;
 	}
 
 	@GetMapping("/users")
