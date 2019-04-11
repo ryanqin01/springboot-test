@@ -6,7 +6,7 @@ test-service:
 
 spring:
   application:
-    name: test-springboot-service
+    name: test-springboot-main-service
   main:
     allow-bean-definition-overrideing: true
   jpa:
