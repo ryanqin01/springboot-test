@@ -14,10 +14,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @EnableScheduling
 @SpringBootApplication
-public class TestApplication {
+public class MainApplication {
 
 	public static void main(String[] args) {
-		SpringApplication springApplication = new SpringApplication(TestApplication.class);
+		SpringApplication springApplication = new SpringApplication(MainApplication.class);
 		springApplication.run(args);
 	}
 
