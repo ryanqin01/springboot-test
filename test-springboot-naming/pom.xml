@@ -9,11 +9,11 @@
 		<artifactId>test-springboot-parent</artifactId>
 		<version>${revision}</version>
 	</parent>
-	<artifactId>test-springboot-assist</artifactId>
+	<artifactId>test-springboot-naming</artifactId>
 	<packaging>jar</packaging>
 	<properties>
 	</properties>
-	<name>test-springboot-assist</name>
+	<name>test-springboot-naming</name>
 	<dependencies>
 		<dependency>
 			<groupId>cn.ryan.springboot</groupId>
@@ -22,15 +22,22 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
 	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>

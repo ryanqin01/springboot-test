@@ -1,20 +1,16 @@
 server:
-  port: 9999
+  port: 8761
 
 spring:
   application:
-    name: test-springboot-assist-service
+    name: test-springboot-naming-service
   main:
     allow-bean-definition-overrideing: true
   autoconfigure:
     exclude:
       "org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration"
             
-#test-springboot-main-service:
-#  ribbon:
-#    listOfServers: "localhost:8888"
-
 eureka:
   client:
-    service-url:
-      default-zone: "http://localhost:8761/eureka"
+    register-with-eureka: false
+    fetch-registry: false
