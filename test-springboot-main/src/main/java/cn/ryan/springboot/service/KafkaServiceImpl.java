@@ -25,7 +25,7 @@ public class KafkaServiceImpl {
 	}
 
 	@Scheduled(fixedRate = 20000)
-	private void sendContinuously() throws JsonProcessingException {
+	void sendContinuously() throws JsonProcessingException {
 		sender.send();
 	}
 }

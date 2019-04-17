@@ -16,11 +16,6 @@
 	<name>test-springboot-naming</name>
 	<dependencies>
 		<dependency>
-			<groupId>cn.ryan.springboot</groupId>
-			<artifactId>test-springboot-model</artifactId>
-			<version>${revision}</version>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>

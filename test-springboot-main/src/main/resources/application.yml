@@ -41,16 +41,13 @@ spring:
       
 logging:
   file: logs/testspringboot-main.log
-  pattern:
-    console: '%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n'
-    file: '%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n'
   level:
-    ROOT: warn
+    ROOT: info
     org:
-      springframework: warn
-      hibernate: ERROR
+      springframework: info
+      hibernate: info
       apache:
-        kafka: ERROR
+        kafka: info
     cn:
       ryan:
         springboot: info
