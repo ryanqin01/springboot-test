@@ -11,7 +11,10 @@ spring:
       "org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration"
 
 logging:
-  file: logs/testspringboot.log
+  file: logs/testspringboot-assist.log
+  pattern:
+    console: '%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n'
+    file: '%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n'
   level:
     ROOT: warn
     org:

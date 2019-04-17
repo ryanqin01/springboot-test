@@ -1,3 +1,3 @@
 1. start main/assist/naming/gateway services
 2. run following request:
-http://localhost:8765/test-springboot-assist-service/client/users/1
+http://localhost:9999/client/users/1
