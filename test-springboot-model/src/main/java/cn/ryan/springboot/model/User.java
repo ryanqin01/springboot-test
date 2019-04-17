@@ -17,6 +17,14 @@ import lombok.ToString;
 @ToString
 public class User {
 
+	public User(Integer id) {
+		this.id = id;
+	}
+
+	public User() {
+
+	}
+
 	@Id
 	@GeneratedValue
 	@Getter

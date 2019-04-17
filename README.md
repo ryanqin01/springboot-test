@@ -17,5 +17,6 @@ This is a learning usage test project about springboot and related techs like fo
 15. Ribbon
 16. Eureka
 17. Zuul
+18. Hystrix
 
 ![qin](https://club1.autoimg.cn/album/userphotos/2014/07/04/500_31c8e48f-bb86-438d-926e-afe89eba942a.jpg "秦logo")
