@@ -1,4 +1,4 @@
-This is a learning usage project about springboot and related techniques listed below. The code may be experimental and inaccurate.
+This is a learning usage project about spring boot and related techniques listed below. The code may be experimental and inaccurate.
 
 1. Maven
 2. Git
