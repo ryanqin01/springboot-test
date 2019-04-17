@@ -40,11 +40,17 @@ spring:
     driver-class-name:"com.mysql.jdbc.Driver"
       
 logging:
+  file: logs/testspringboot.log
   level:
+    ROOT: warn
     org:
-      springframework:
-        web: DEBUG
-      hibernate: DEBUG
+      springframework: warn
+      hibernate: ERROR
+      apache:
+        kafka: ERROR
+    cn:
+      ryan:
+        springboot: info
 
 mybatis:
   typeAliasesPackage: "cn.ryan.springboot.model"

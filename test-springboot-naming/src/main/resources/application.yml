@@ -10,6 +10,16 @@ spring:
     exclude:
       "org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration"
             
+logging:
+  file: logs/testspringboot.log
+  level:
+    ROOT: warn
+    org:
+      springframework: warn
+    cn:
+      ryan:
+        springboot: info
+
 eureka:
   client:
     register-with-eureka: false

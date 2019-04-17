@@ -1,15 +1,15 @@
 server:
-  port: 9999
+  port: 8765
 
 spring:
   application:
-    name: test-springboot-assist-service
+    name: test-springboot-gateway-service
   main:
     allow-bean-definition-overrideing: true
   autoconfigure:
     exclude:
       "org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration"
-
+            
 logging:
   file: logs/testspringboot.log
   level:
@@ -19,10 +19,6 @@ logging:
     cn:
       ryan:
         springboot: info
-            
-#test-springboot-main-service:
-#  ribbon:
-#    listOfServers: "localhost:8888"
 
 eureka:
   client:

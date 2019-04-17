@@ -9,7 +9,9 @@ import org.springframework.stereotype.Service;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 import cn.ryan.springboot.message.KafkaSender;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Service
 public class KafkaServiceImpl {
 
@@ -19,6 +21,7 @@ public class KafkaServiceImpl {
 	@PostConstruct
 	private void sendTest() throws JsonProcessingException {
 		sender.send();
+		log.info("send message through kafka successfully!");
 	}
 
 	@Scheduled(fixedRate = 20000)

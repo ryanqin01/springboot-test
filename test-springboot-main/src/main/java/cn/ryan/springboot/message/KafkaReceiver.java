@@ -18,7 +18,7 @@ public class KafkaReceiver {
 		if (kafkaMessage.isPresent()) {
 			Object message = kafkaMessage.get();
 			log.debug("consumer record = {}", record);
-			log.info("receive message = {}", message);
+			log.debug("receive message = {}", message);
 		}
 	}
 }

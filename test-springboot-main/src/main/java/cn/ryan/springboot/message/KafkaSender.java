@@ -29,7 +29,7 @@ public class KafkaSender {
 		message.setId(System.currentTimeMillis());
 		message.setMsg(UUID.randomUUID().toString());
 		message.setSendTime(new Date());
-		log.info("send message = {}", objectMapper.writeValueAsString(message));
+		log.debug("send message = {}", objectMapper.writeValueAsString(message));
 		kafkaTemplate.send(kafkaTopicName, objectMapper.writeValueAsString(message));
 	}
 }

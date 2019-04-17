@@ -23,6 +23,7 @@
 		<module>test-springboot-assist</module>
 		<module>test-springboot-model</module>
 		<module>test-springboot-naming</module>
+		<module>test-springboot-gateway</module>
 	</modules>
 	<dependencies>
 		<dependency>
