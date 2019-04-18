@@ -1,4 +1,5 @@
-This is a learning usage project about spring boot and related techniques listed below. The code may be experimental and inaccurate.
+This is a learning usage project about spring boot and related techniques listed below. The code is concise and easy to learn.
+If you have any question, please contact via: ryanqin01@gmail.com
 
 0. Maven
 1. Git
