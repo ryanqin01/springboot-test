@@ -20,5 +20,6 @@ This is a learning usage project about spring boot and related techniques listed
 17. Hystrix
 18. HAL Browser
 19. Spring Boot Dev-tools
+20. CommandLineRunner
 
 ![qin](https://club1.autoimg.cn/album/userphotos/2014/07/04/500_31c8e48f-bb86-438d-926e-afe89eba942a.jpg "秦logo")
