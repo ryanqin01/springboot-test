@@ -4,6 +4,16 @@ server:
 test-service:
   testvalue: 1
 
+management:
+  endpoints:
+    health:
+      show-details: always
+    web:
+      base-path: /actuator
+      exposure:
+        include: "*"
+        exclude: env
+
 spring:
   application:
     name: test-springboot-main-service
