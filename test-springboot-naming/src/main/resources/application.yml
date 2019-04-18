@@ -4,18 +4,13 @@ server:
 spring:
   application:
     name: test-springboot-naming-server
-  main:
-    allow-bean-definition-overrideing: true
-  autoconfigure:
-    exclude:
-      "org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration"
             
 logging:
   file: logs/testspringboot-naming.log
   level:
-    ROOT: info
+    ROOT: warn
     org:
-      springframework: info
+      springframework: warn
     cn:
       ryan:
         springboot: info
@@ -23,4 +18,4 @@ logging:
 eureka:
   client:
     register-with-eureka: false
-    fetch-registry: true
+    fetch-registry: false

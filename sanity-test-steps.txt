@@ -1,0 +1,17 @@
+1. start main/assist/naming/gateway services/servers
+2. have a cup of coffee, otherwise you MAY meet errors like "not have available server"
+3. run following request:
+GET: http://localhost:9999/client/users/1
+should return: 
+{
+    "id": 1,
+    "name": "changed+ryan",
+    "from": "Jiangsu"
+}
+GET: http://localhost:9999/client/users/5
+should return: 
+{
+    "id": 1,
+    "name": "changed+fallbackUser",
+    "from": "China"
+}

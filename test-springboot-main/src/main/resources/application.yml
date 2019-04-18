@@ -17,8 +17,6 @@ management:
 spring:
   application:
     name: test-springboot-main-service
-  main:
-    allow-bean-definition-overrideing: true
   jpa:
     show-sql: true
   h2:
@@ -52,9 +50,9 @@ spring:
 logging:
   file: logs/testspringboot-main.log
   level:
-    ROOT: info
+    ROOT: warn
     org:
-      springframework: info
+      springframework: warn
       hibernate: info
       apache:
         kafka: info

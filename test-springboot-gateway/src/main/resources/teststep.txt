@@ -1,3 +1,0 @@
-1. start main/assist/naming/gateway services
-2. run following request:
-http://localhost:9999/client/users/1

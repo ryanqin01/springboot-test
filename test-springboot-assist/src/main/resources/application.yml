@@ -4,18 +4,15 @@ server:
 spring:
   application:
     name: test-springboot-assist-service
-  main:
-    allow-bean-definition-overrideing: true
   autoconfigure:
-    exclude:
-      "org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration"
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
 
 logging:
   file: logs/testspringboot-assist.log
   level:
-    ROOT: info
+    ROOT: warn
     org:
-      springframework: info
+      springframework: warn
     cn:
       ryan:
         springboot: info
