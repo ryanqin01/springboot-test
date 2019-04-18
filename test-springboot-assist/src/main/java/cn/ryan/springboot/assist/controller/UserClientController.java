@@ -21,7 +21,7 @@ public class UserClientController {
 	@GetMapping("/users/{id}")
 	public User changeUser(@PathVariable String id) {
 		User user = proxy.getUserById(id);
-		user.setName("changed" + user.getName());
+		user.setName("changed+" + user.getName());
 		log.info(user.toString());
 		return user;
 	}

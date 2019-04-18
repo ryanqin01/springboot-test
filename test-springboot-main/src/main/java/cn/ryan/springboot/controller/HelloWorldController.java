@@ -28,6 +28,6 @@ public class HelloWorldController {
 	@GetMapping
 	public String sayHello(@RequestHeader(name = "Accept-Language", required = false) Locale locale) {
 		return messageSource.getMessage("hello.message", null, locale) + " testvalue: " + config.getTestvalue() + ". environment: "
-						+ env.getProperty("local.server.port");
+						+ env.getProperty("local.server.port") + ".";
 	}
 }

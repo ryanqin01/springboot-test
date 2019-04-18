@@ -2,7 +2,7 @@ This is a learning usage project about spring boot and related techniques listed
 
 0. Maven
 1. Git
-2. Springboot
+2. Spring Boot
 3. Mybatis
 4. Microservice
 5. Mysql
@@ -19,4 +19,5 @@ This is a learning usage project about spring boot and related techniques listed
 16. Zuul
 17. Hystrix
 18. HAL Browser
+19. Spring Boot Dev-tools
 ![qin](https://club1.autoimg.cn/album/userphotos/2014/07/04/500_31c8e48f-bb86-438d-926e-afe89eba942a.jpg "秦logo")
