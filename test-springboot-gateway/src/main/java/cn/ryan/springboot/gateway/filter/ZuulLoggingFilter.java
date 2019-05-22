@@ -1,7 +1,10 @@
 package cn.ryan.springboot.gateway.filter;
 
+import java.io.IOException;
+
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
 import com.netflix.zuul.ZuulFilter;
@@ -21,8 +24,17 @@ public class ZuulLoggingFilter extends ZuulFilter {
 
 	@Override
 	public Object run() throws ZuulException {
-		HttpServletRequest request = RequestContext.getCurrentContext().getRequest();
+		RequestContext ctx = RequestContext.getCurrentContext();
+		HttpServletRequest request = ctx.getRequest();
 		log.info("request -> {} request uri -> {}", request, request.getRequestURI());
+		if (request.getContentLength() < 1) {
+			ctx.setSendZuulResponse(false);
+			ctx.setResponseStatusCode(HttpStatus.SC_BAD_REQUEST);
+			try {
+				ctx.getResponse().getWriter().write("bad request");
+			} catch (IOException e) {
+			}
+		}
 		return null;
 	}
 
